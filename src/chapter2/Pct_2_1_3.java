@@ -1,4 +1,4 @@
-package chapter_2;
+package chapter2;
 
 import edu.princeton.cs.algs4.Selection;
 import edu.princeton.cs.algs4.StdIn;
