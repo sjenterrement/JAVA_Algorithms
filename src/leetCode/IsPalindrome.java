@@ -4,16 +4,15 @@ import java.util.Scanner;
 
 public class IsPalindrome {
 	public static boolean isPalindrome(int x) {
-		int a,res=0;
-		if(x>0)
+		if(x<0)
 			return false;
-		else if(x%10==0)
-			return false;
-		for (int temp = x; temp!=0; temp/=10) {
-		a=temp%10;
+		int a=0,res = 0;
+		for (int i = x; i!=0; i/=10) {
+			a=i%10;
 			res=res*10+a;
 		}
-		return true;
+		
+		return res==x;
 		
 	}
 	
