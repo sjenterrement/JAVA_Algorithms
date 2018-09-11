@@ -4,32 +4,20 @@ import java.util.ArrayList;
 
 public class LongestCommonPrefix {
 
-	public String LongestCommonPrefix(String[] strs) {
-		int p = 0;
-		ArrayList<String> List1 = new ArrayList<String>();
-
-		for (String s : strs) {
-			List1.add(s);
-			p++;
-		}
-		for (int i = 0; i < p; i++) {
-			for (int i1 = 0; i1 < List1.get(i).toCharArray().length; i1++) {
-				for (int i2 = 0; i2 < List1.get(i+1).toCharArray().length; i2++) {
-					for (int i3 = 0; i3 < strs.length; i3++) {
-						
-					}
-					
+	public void LongestCommonPrefix(String[] strs) {
+		String[] s= {"leets","leetcode","leet","lee"};
+		if(s.length==0)
+			System.out.println("error");
+		
+		String prefix=s[0];
+		
+		for (int i = 1; i < s.length; i++) {
+			while (s[i].indexOf(prefix)!=0) {
+				prefix=prefix.substring(0, prefix.length()-1);
+				if (prefix.isEmpty()) {
+					System.out.println("没有相同的前缀");
 				}
 			}
 		}
-
-		return null;
-
 	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
